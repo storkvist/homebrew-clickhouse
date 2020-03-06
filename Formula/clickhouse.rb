@@ -2,7 +2,7 @@ class Clickhouse < Formula
   desc "ClickHouse — open source distributed column-oriented DBMS"
   homepage "https://clickhouse.tech"
   version "20.1.6.30"
-  sha256 "4ba6f90f8668c48bc14b75c0ec510044f9b200c0a9f295932f25535d329e24cd"
+  sha256 "fa69e72ee35ebfe1b35aeeab050b08884c37aa1b19b87a1f5190a9b0ce07f551"
   url "https://github.com/ClickHouse/ClickHouse/archive/v20.1.6.30-stable.tar.gz"
 
   depends_on "cmake" => :build
