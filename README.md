@@ -1,14 +1,14 @@
-# Storkvist Clickhouse
+# Storkvist Formulae
 
 ## How do I install these formulae?
-`brew install storkvist/clickhouse/<formula>`
+`brew install storkvist/formulae/<formula>`
 
-Or `brew tap storkvist/clickhouse` and then `brew install <formula>`.
+Or `brew tap storkvist/formulae` and then `brew install <formula>`.
 
 Or install via URL (which will not receive updates):
 
 ```
-brew install https://raw.githubusercontent.com/storkvist/homebrew-clickhouse/master/Formula/<formula>.rb
+brew install https://raw.githubusercontent.com/storkvist/homebrew-formulae/master/Formula/<formula>.rb
 ```
 
 ## Documentation
