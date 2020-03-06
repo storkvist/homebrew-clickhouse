@@ -2,7 +2,7 @@ class Clickhouse < Formula
   desc "ClickHouse — open source distributed column-oriented DBMS"
   homepage "https://clickhouse.tech"
   version "20.1.6.30"
-  sha256 "935524456f2291afa36ef815e68f1ab4a37a4ed6f0f144b7de7fb270733e13af"
+  sha256 "4ba6f90f8668c48bc14b75c0ec510044f9b200c0a9f295932f25535d329e24cd"
   url "https://github.com/yandex/ClickHouse.git", tag: "v20.1.6.30-stable"
 
   depends_on "cmake" => :build
@@ -12,7 +12,7 @@ class Clickhouse < Formula
 
   def install
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args, *args
+      system "cmake", "..", "-DCMAKE_CXX_COMPILER=`which clang++`", "-DCMAKE_C_COMPILER=`which clang`"
       system "ninja"
     end
 
