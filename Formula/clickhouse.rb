@@ -1,10 +1,22 @@
-class Rcm < Formula
+class Clickhouse < Formula
   desc "ClickHouse — open source distributed column-oriented DBMS"
   homepage "https://clickhouse.tech"
   url "https://github.com/ClickHouse/ClickHouse/archive/v20.3.1.2564-testing.tar.gz"
-  sha256 "935524456f2291afa36ef815e68f1ab4a37a4ed6f0f144b7de7fb270733e13af"
+  version "20.3.1.2564"
+
+  head "https://github.com/yandex/ClickHouse.git"
+
+  depends_on "cmake" => :build
+  depends_on "ninja" => :build
+  depends_on "libtool" => :build
+  depends_on "gettext" => :build
 
   def install
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args, *args
+      system "ninja"
+    end
+
     # system "./configure", "--disable-debug", "--disable-dependency-tracking",
     #                       "--prefix=#{prefix}"
     # system "make", "install"
