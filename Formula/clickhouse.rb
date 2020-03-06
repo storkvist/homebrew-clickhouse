@@ -3,7 +3,7 @@ class Clickhouse < Formula
   homepage "https://clickhouse.tech"
   version "20.1.6.30"
   sha256 "4ba6f90f8668c48bc14b75c0ec510044f9b200c0a9f295932f25535d329e24cd"
-  url "https://github.com/yandex/ClickHouse.git", tag: "v20.1.6.30-stable"
+  url "https://github.com/ClickHouse/ClickHouse/archive/v20.1.6.30-stable.tar.gz"
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
